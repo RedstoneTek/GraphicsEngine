@@ -5,6 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 
+import com.tek.api.graphics.objects.GraphicsImage;
 import com.tek.api.graphics.objects.GraphicsPolygon;
 import com.tek.api.graphics.objects.GraphicsPolygon.Shape;
 import com.tek.api.graphics.objects.GraphicsString;
@@ -13,6 +14,7 @@ public class GraphicsEngine {
 	
 	ArrayList<GraphicsPolygon> renderobj = new ArrayList<GraphicsPolygon>();
 	ArrayList<GraphicsString> renderstr = new ArrayList<GraphicsString>();
+	ArrayList<GraphicsImage> renderimg = new ArrayList<GraphicsImage>();
 	
 	Canvas canvas;
 	
@@ -73,6 +75,10 @@ public class GraphicsEngine {
 		
 		for(GraphicsString string : renderstr){
 			g.drawString(string.getString(), string.getX(), string.getY());
+		}
+		
+		for(GraphicsImage image : renderimg){
+			g.drawImage(image.getImage(), image.getX(), image.getY(), image.getWidth(), image.getHeight(), null);
 		}
 	}
 }
