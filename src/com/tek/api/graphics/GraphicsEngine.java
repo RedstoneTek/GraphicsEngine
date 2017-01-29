@@ -37,6 +37,9 @@ public class GraphicsEngine {
 			    case OVAL:
 			    	g.drawOval(obj.getX(), obj.getY(), obj.getWidth(), obj.getHeight());
 				    break;
+			    case LINE:
+			    	g.drawLine(obj.getX(), obj.getY(), obj.getX() + obj.getWidth(), obj.getY() + obj.getHeight());
+			    	break;
 			    case TRIANGLE:
 			    	int xpoints[] = {obj.getX() + obj.getWidth() / 2, obj.getX(), obj.getX() + obj.getWidth()};
 			    	int ypoints[] = {obj.getY(), obj.getY() + obj.getHeight(), obj.getHeight() + obj.getY()};

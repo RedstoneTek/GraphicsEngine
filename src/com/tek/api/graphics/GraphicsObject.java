@@ -9,6 +9,7 @@ public class GraphicsObject {
 	Shape shape;
 	
 	public static enum Shape{
+		LINE,
 		TRIANGLE,
 		RECTANGLE,
 		PENTAGON,
