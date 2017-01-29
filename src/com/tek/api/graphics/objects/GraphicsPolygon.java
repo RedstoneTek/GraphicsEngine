@@ -1,6 +1,6 @@
-package com.tek.api.graphics;
+package com.tek.api.graphics.objects;
 
-public class GraphicsObject {
+public class GraphicsPolygon {
 	
 	int x;
 	int y;
@@ -17,7 +17,7 @@ public class GraphicsObject {
 		OVAL;
 	}
 	
-	public GraphicsObject(int x, int y, int width, int height, Shape shape){
+	public GraphicsPolygon(int x, int y, int width, int height, Shape shape){
 		this.x = x;
 		this.y = y;
 		this.width = width;

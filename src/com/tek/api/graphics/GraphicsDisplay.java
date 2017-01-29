@@ -20,6 +20,8 @@ public class GraphicsDisplay extends JFrame{
 		canvas.setBounds(0, 0, width, height);
 		getContentPane().add(canvas);
 		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
 		setResizable(false);
 		setVisible(true);
 	}
