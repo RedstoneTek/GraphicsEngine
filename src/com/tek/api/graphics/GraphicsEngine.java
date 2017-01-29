@@ -3,7 +3,11 @@ package com.tek.api.graphics;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.net.URL;
 import java.util.ArrayList;
+
+import javax.imageio.ImageIO;
 
 import com.tek.api.graphics.objects.GraphicsImage;
 import com.tek.api.graphics.objects.GraphicsPolygon;
@@ -36,6 +40,18 @@ public class GraphicsEngine {
 	
 	public void drawString(int x, int y, String string){
 		renderstr.add(new GraphicsString(x,y,string));
+	}
+	
+	public void drawImage(int x, int y, int width, int height, BufferedImage image){
+		renderimg.add(new GraphicsImage(x,y,width,height,image));
+	}
+	
+	public BufferedImage getImageFromURL(String url){
+		try{
+			return ImageIO.read(new URL(url));
+		}catch(Exception e){
+			return null;
+		}
 	}
 	
 	public void render(){
