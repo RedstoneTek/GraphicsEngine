@@ -31,7 +31,7 @@ public class GraphicsEngine {
 	}
 	
 	public void toggleStatus(){
-		canvas.setEnabled(!canvas.isEnabled());
+		canvas.setVisible(!canvas.isVisible());
 	}
 	
 	public void clearCanvas(){
