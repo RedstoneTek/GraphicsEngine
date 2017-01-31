@@ -2,7 +2,6 @@ package com.tek.api.graphics;
 
 import java.awt.Canvas;
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.net.URL;
@@ -37,11 +36,6 @@ public class GraphicsEngine {
 	
 	public void clearCanvas(){
 		renderobj.clear();
-	}
-	
-	public void setFont(Font font){
-		canvas.setFont(font);
-		canvas.getGraphics().setFont(font);
 	}
 	
 	public void draw(int x, int y, int width, int height, Shape shape){
