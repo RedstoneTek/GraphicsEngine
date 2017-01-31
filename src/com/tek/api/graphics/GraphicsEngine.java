@@ -58,6 +58,10 @@ public class GraphicsEngine {
 		}
 	}
 	
+	public Canvas getCanvas(){
+		return canvas;
+	}
+	
 	public void render(){
 		Graphics g = canvas.getGraphics();
 		
