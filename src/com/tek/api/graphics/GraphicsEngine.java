@@ -41,6 +41,7 @@ public class GraphicsEngine {
 	
 	public void setFont(Font font){
 		canvas.setFont(font);
+		canvas.getGraphics().setFont(font);
 	}
 	
 	public void draw(int x, int y, int width, int height, Shape shape){
